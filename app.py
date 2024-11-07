@@ -10,10 +10,46 @@ import streamlit as st
 # https://www.markdownguide.org/basic-syntax/
 
 import streamlit as st
-COLOR_EWELL = '#005E87'
-COLOR_EWELL = '#FDFDFD'
-
 st.set_page_config(layout="wide")
+
+# Add custom CSS for breadcrumb-style buttons
+
+st.markdown(
+    """
+    <style>
+    .breadcrumb-container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5px;
+    }
+    .breadcrumb {
+        font-size: 1.2em;
+        color: #005E87;
+        background-color: #ffffff;
+        border: 1px solid #005E87;
+        padding: 2px 2px;
+        border-radius: 2px;
+        text-decoration: none;
+    }
+    .breadcrumb:hover {
+        background-color: #005E87;
+        color: white;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# Breadcrumb buttons container
+st.markdown(
+    """
+    <div class="breadcrumb-container">
+        <a href="#" class="breadcrumb">← Jupiter</a>
+        <a href="#" class="breadcrumb">Uranus →</a>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 st.markdown(
     """
@@ -23,8 +59,8 @@ st.markdown(
         text-align: left;
         color: #005E87; 
         background-color: white; 
-        padding: 10px;
-        margin-top: -10px;
+        padding: 5px;
+        margin-top: -5px;
     }
     .subtitle {
         font-size: 1.2em;
@@ -32,7 +68,7 @@ st.markdown(
         color: #005E87;
         background-color: white;
         padding: 5px;
-        margin-top: -10px;
+        margin-top: -15px;
     }
     </style>
     """,
@@ -40,10 +76,11 @@ st.markdown(
 )
 
 # Title and subtitle text
-st.markdown('<div class="title">Ewell Astronomy Club</div>', unsafe_allow_html=True)
+st.markdown('<div class="title">Ewell Astronomy Society</div>', unsafe_allow_html=True)
 st.markdown('<div class="subtitle">Nonsuch Park Solar System Walk</div>', unsafe_allow_html=True)
 
-col1, col2 = st.columns(2)
+# col1, col2 = st.columns(2)
+col1, colblank, col2 = st.columns([1, 0.1, 1])
 
 with col1.container():
     sub_col1, sub_col2 = st.columns(2)  # Inner layout with two columns
@@ -75,6 +112,35 @@ col1.html("Saturn is well know for it's icy rings, which extend to 280,000 km. T
 # Day
 # Number of moons')
 
+# Example image and text with HTML and CSS for text wrapping
+st.markdown(
+    """
+    <style>
+    .image-wrap {
+        float: left; /* Float image to the left to allow text wrapping */
+        margin: 0 15px 10px 0; /* Adds space around the image */
+        width: 200px; /* Set image width */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# # Display the image with wrapping text
+# col2.html(
+#     """
+#     <div>
+#         <img src="FunFact.png" class="image-wrap">
+#         <p>
+#             This is a sample paragraph that will flow around the image. The CSS float property allows the text to wrap around the image seamlessly. 
+#             You can add as much text as needed here, and it will naturally fill the space to the right of the image. This setup is ideal for adding descriptions 
+#             or explanations alongside images in a visually appealing format.
+#         </p>
+#     </div>
+#     """,
+#     unsafe_allow_html=True
+# )
+
 col2.html("Saturn currently over 145 known moons, of which, Titan is the largest.  \
           At over 5,000 kilometres in diameter Titan is larger than the planet Mercury and is only \
           just beaten by Jupiter’s moon Ganymede to the title of the solar system’s largest moon.  \
@@ -83,4 +149,4 @@ col2.html("Saturn currently over 145 known moons, of which, Titan is the largest
           Titan has a thick atmosphere mostly made of nitrogen, like the Earth.  \
           However, although Titan also has liquid on its surface, it is not liquid water, \
           but liquid methane and ethane.")
-col2.image('FunFact.png', width=500)  # Adjust the width as needed
+col2.image('FunFact.png', width=350)  # Adjust the width as needed
