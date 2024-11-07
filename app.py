@@ -141,7 +141,7 @@ st.markdown(
 #     unsafe_allow_html=True
 # )
 
-col2.html("Saturn currently over 145 known moons, of which, Titan is the largest.  \
+col2.html("Saturn currently has over 145 known moons, of which, Titan is the largest.  \
           At over 5,000 kilometres in diameter Titan is larger than the planet Mercury and is only \
           just beaten by Jupiter’s moon Ganymede to the title of the solar system’s largest moon.  \
           Titan is also the most distant object that man has landed a spacecraft on – the \
