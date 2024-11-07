@@ -99,7 +99,7 @@ with col1.container():
 #           The Earth is also squashed, but only by a little. At the equator our diameter is \
 #           12,756 kilometers, at the poles it's 12,725, so not even the distance of a marathon. \
 #           Astronomers usual estimate that Saturn is 9 times wider than the Earth.")
-col1.html("Saturn is well know for it's icy rings, which extend to 280,000 km. The rings are up to 9 meters thick. \
+col1.html("Saturn is well knowm for it's icy rings, which extend to 280,000 km. The rings are up to 9 meters thick. \
           Even through a small telescope Saturn is an amazing sight. The rings were first observed over 400 years \
           ago soon after the invention of the telescope. Although the other giant planets also have ring systems, \
           they are not easily seen and were all discovered within the last 50 years.")
