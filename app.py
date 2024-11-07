@@ -76,7 +76,7 @@ st.markdown(
 )
 
 # Title and subtitle text
-st.markdown('<div class="title">Ewell Astronomy Society</div>', unsafe_allow_html=True)
+st.markdown('<div class="title"><b>Ewell Astronomical Society</b></div>', unsafe_allow_html=True)
 st.markdown('<div class="subtitle">Nonsuch Park Solar System Walk</div>', unsafe_allow_html=True)
 
 # col1, col2 = st.columns(2)
